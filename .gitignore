@@ -1,0 +1,11 @@
+# MySQL database files
+*.sql
+*.sql.gz
+*.sql.zip
+*.sql.tar.gz
+
+# Environment variables file
+.env
+
+# MySQL data directory
+mysql-data/
