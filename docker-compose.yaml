@@ -25,6 +25,7 @@ services:
       - ./mysql/config/mysql-healthcheck.sh:/usr/local/bin/mysql-healthcheck:ro
       - ./mysql/backup:/backup
       - ./mysql/init:/docker-entrypoint-initdb.d
+      - mysql_logs:/var/lib/mysql
     networks:
       - mysql_network
     healthcheck:
@@ -109,6 +110,8 @@ networks:
 
 volumes:
   mysql_data:
+    driver: local
+  mysql_logs:
     driver: local
   prometheus_data:
     driver: local
