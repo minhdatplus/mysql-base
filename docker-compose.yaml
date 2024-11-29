@@ -25,7 +25,7 @@ services:
       - ./mysql/config/mysql-healthcheck.sh:/usr/local/bin/mysql-healthcheck:ro
       - ./mysql/backup:/backup
       - ./mysql/init:/docker-entrypoint-initdb.d
-      - mysql_logs:/var/lib/mysql
+      - mysql_logs:/var/log/mysql
     networks:
       - mysql_network
     healthcheck:
